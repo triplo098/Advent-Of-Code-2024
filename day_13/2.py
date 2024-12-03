@@ -1,11 +1,17 @@
 
-readInput = True #deciding between demo or input
+def main():
 
-if readInput == True:
-    fileNameToRead = "input.txt"
-else:
-    fileNameToRead = "demo_input.txt"
+    readInput = True #deciding between demo or input
 
-data = open(fileNameToRead, "r").read()
+    if readInput == True:
+        fileNameToRead = "input.txt"
+    else:
+        fileNameToRead = "demo_input.txt"
 
-print(data)
+    data = open(fileNameToRead, "r").read()
+
+    print(data)
+
+
+if __name__ == "__main__":
+    main()
