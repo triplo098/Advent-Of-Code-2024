@@ -34,7 +34,7 @@ def main():
 
                 # print("i ", i, "j ", j)
                 if i < 1 or j < 1 or i >= len(matrix) - 1 or j >= len(matrix[0]) - 1:
-                    break
+                    continue
 
                 diag_1 = {matrix[i - 1][j - 1], matrix[i + 1][j + 1]}
                 diag_2 = {matrix[i - 1][j + 1], matrix[i + 1][j - 1]}
