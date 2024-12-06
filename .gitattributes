@@ -1,0 +1,1 @@
+day_*/*.txt filter=git-crypt diff=git-crypt
