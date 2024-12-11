@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 def blink_rec(stones, n):
 
@@ -9,6 +10,8 @@ def blink_rec(stones, n):
 
     print(n)
     for stone in stones:
+
+        num_of_dig = math.floor(math.log(abs(stone), 10) + 1)
 
         if stone == 0:
             out_num += blink_rec([1], n - 1)
@@ -32,14 +35,11 @@ def main():
 
     data = open(fileNameToRead, "r").read()
 
-    # print(data)
-    # stones = np.array([int(x) for x in data.split(" ")])
-
     stones = [int(x) for x in filter(None, data.split(" "))]
 
     out = blink_rec(stones, 75)
 
-    print(out)
+
 
 
 
